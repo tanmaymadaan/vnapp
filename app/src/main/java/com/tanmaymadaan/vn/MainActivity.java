@@ -1,5 +1,6 @@
 package com.tanmaymadaan.vn;
 
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,20 +15,35 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ListFragment.OnOptionClickListener{
 
     EditText mrdNo, fName, lName;
     TextView result;
+    private FragmentManager fragmentManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mrdNo = findViewById(R.id.mrdNo);
-        fName = findViewById(R.id.firstName);
-        lName = findViewById(R.id.lastName);
-        result = findViewById(R.id.result);
+        fragmentManager = getSupportFragmentManager();
+        if(savedInstanceState == null){
+            fragmentManager.beginTransaction()
+                    .add(R.id.container, new ListFragment())
+                    .commit();
+
+            fragmentManager.beginTransaction()
+                    .add(R.id.detailsContainer, new PatientFragment())
+                    .commit();
+        }
     }
+
+    @Override
+    public void onOptionSelected(String option) {
+
+    }
+
+    /*
 
     public void addPatient(View view){
         String mrdNoS = mrdNo.getText().toString().trim();
@@ -76,4 +92,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    */
 }

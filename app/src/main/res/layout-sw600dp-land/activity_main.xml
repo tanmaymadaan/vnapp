@@ -3,54 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
+
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <TextView
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MRD No: "
-        android:textSize="40sp"/>
-    <EditText
-        android:layout_width="150dp"
-        android:id="@+id/mrdNo"
-        android:layout_height="wrap_content"
-        android:text="MRDNO" />
+        android:id="@+id/container">
 
-    <TextView
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FIrst Name"
-        android:textSize="40sp" />
-    <EditText
-        android:layout_width="150dp"
-        android:id="@+id/firstName"
-        android:layout_height="wrap_content"
-        android:text="FirstName" />
+        android:id="@+id/detailsContainer">
 
+    </FrameLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LastName"
-        android:textSize="40sp"/>
-    <EditText
-        android:layout_width="150dp"
-        android:id="@+id/lastName"
-        android:layout_height="wrap_content"
-        android:text="LastName" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click"
-        android:onClick="addPatient"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/result"
-        android:textSize="40sp"/>
 </LinearLayout>

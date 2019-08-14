@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">VN</string>
     <string name="url">http://ec2-13-127-219-61.ap-south-1.compute.amazonaws.com:4000/api/</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
