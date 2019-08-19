@@ -1,0 +1,15 @@
+{
+	"auth": {
+		"vnapp3439521a": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"auth": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

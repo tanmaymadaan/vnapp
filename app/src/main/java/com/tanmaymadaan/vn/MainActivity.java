@@ -1,11 +1,14 @@
 package com.tanmaymadaan.vn;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.amazonaws.mobileconnectors.s3.transferutility.TransferService;
 
 import java.io.IOException;
 
@@ -26,12 +29,10 @@ public class MainActivity extends AppCompatActivity implements ListFragment.OnOp
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getApplicationContext().startService(new Intent(getApplicationContext(), TransferService.class));
+
         fragmentManager = getSupportFragmentManager();
         if(savedInstanceState == null){
-            fragmentManager.beginTransaction()
-                    .add(R.id.container, new ListFragment())
-                    .commit();
-
             fragmentManager.beginTransaction()
                     .add(R.id.detailsContainer, new PatientFragment())
                     .commit();

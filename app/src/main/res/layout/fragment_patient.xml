@@ -6,12 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".PatientFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="150dp"
@@ -26,7 +30,7 @@
             app:layout_constraintTop_toTopOf="@+id/phoneNo" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/idNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="150dp"
@@ -35,10 +39,10 @@
             android:hint="ID Number"
             android:inputType="number"
             android:textColor="#000"
-            app:layout_constraintBottom_toBottomOf="@+id/spinner"
+            app:layout_constraintBottom_toBottomOf="@+id/idSpinner"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/phoneNo"
-            app:layout_constraintTop_toTopOf="@+id/spinner" />
+            app:layout_constraintTop_toTopOf="@+id/idSpinner" />
 
         <EditText
             android:id="@+id/firstName"
@@ -83,7 +87,7 @@
             app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/idSpinner"
             android:layout_width="212dp"
             android:layout_height="37dp"
             android:layout_marginStart="140dp"
@@ -101,7 +105,7 @@
             android:textColor="#000"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+            app:layout_constraintTop_toBottomOf="@+id/genderSpinner" />
 
         <EditText
             android:id="@+id/address"
@@ -129,7 +133,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/stateSpinner"
             android:layout_width="212dp"
             android:layout_height="43dp"
             android:layout_marginStart="85dp"
@@ -139,13 +143,13 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/genderSpinner"
             android:layout_width="210dp"
-            android:layout_height="33dp"
+            android:layout_height="26dp"
             android:layout_marginStart="140dp"
             android:layout_marginTop="28dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            app:layout_constraintTop_toBottomOf="@+id/idSpinner" />
 
         <EditText
             android:id="@+id/guardianName"
@@ -156,10 +160,10 @@
             android:ems="10"
             android:hint="Guardian's Name"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="@+id/spinner3"
+            app:layout_constraintBottom_toBottomOf="@+id/genderSpinner"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/spinner3"
-            app:layout_constraintTop_toTopOf="@+id/spinner3"
+            app:layout_constraintStart_toEndOf="@+id/genderSpinner"
+            app:layout_constraintTop_toTopOf="@+id/genderSpinner"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
@@ -187,5 +191,5 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
-
+    </ScrollView>
 </FrameLayout>

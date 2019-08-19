@@ -1,0 +1,19 @@
+{
+    "vnappenv": {
+        "awscloudformation": {
+            "AuthRoleName": "vnapp-vnappenv-20190819132549-authRole",
+            "UnauthRoleArn": "arn:aws:iam::666996041342:role/vnapp-vnappenv-20190819132549-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::666996041342:role/vnapp-vnappenv-20190819132549-authRole",
+            "Region": "ap-south-1",
+            "DeploymentBucketName": "vnapp-vnappenv-20190819132549-deployment",
+            "UnauthRoleName": "vnapp-vnappenv-20190819132549-unauthRole",
+            "StackName": "vnapp-vnappenv-20190819132549",
+            "StackId": "arn:aws:cloudformation:ap-south-1:666996041342:stack/vnapp-vnappenv-20190819132549/c8149980-c256-11e9-82da-06ba22c3467e"
+        },
+        "categories": {
+            "auth": {
+                "vnapp3439521a": {}
+            }
+        }
+    }
+}

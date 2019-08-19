@@ -76,7 +76,7 @@ public class NewPatientFragment extends Fragment {
 
 
                         result.setText("Posted " + patientRes.getMrdNo());
-                    }
+                    }a
 
                     @Override
                     public void onFailure(Call<Patient> call, Throwable t) {
